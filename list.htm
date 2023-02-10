@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>erwin Report Designer - default Document </title>
+        <style>
+        ul 
+        {
+            list-style-type:none;
+            <!-- list-style-image:url(_images/report.png); -->
+            margin-bottom: 2px;
+        }
+        ul li 
+        {
+            list-style-position: initial;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        } 
+         
+        ul ul 
+        {
+            list-style-type: none;
+            <!-- list-style-image:url(_images/subject-area.png); -->
+            
+        }
+        ul ul li 
+        {
+            list-style-position: initial;
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+               
+        ul ul ul 
+        {
+            list-style-type: none;
+            <!-- list-style-image:url(_images/diagram.png); -->
+        }
+        ul ul ul li 
+        {
+            list-style-position: initial;
+			margin-bottom: 2px;
+        }
+		
+		.clicker{
+			cursor: pointer;
+		}
+		
+		.clicker::before{
+			content: "";
+			height: 16px;
+			width : 16px;
+			display : inline-block;
+			background-image: url("_images/arrow-forward.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			<!-- background-size: cover; -->
+			
+		}
+		
+		.nestedUL{
+			<!-- display: none; -->
+			padding: 0 0 0 15px;
+		}
+		.activeUL{
+			display:block;
+		}
+		.clicker-down::before{
+			transform: rotate(90deg);
+		}
+		
+    </style>
+</head>
+<BODY style="background-color:rgba(244, 244, 244, 1);" TEXT=#000000 link=#000000 Vlink=#000000 Alink=#990000>
+    <p align="center">
+        <a href="http://www.erwin.com" target="REPWINDOW">
+            <img src="_images\erwinQuest.svg" border="0" height=100px width=100px></a>
+    </p>
+    <img src="_images\solution.png"><b><a href="welcome.htm" target="REPWINDOW"><font face="Arial" size="3" color="#0033FF"> default</font></a></b>
+    <table width=100%>       
+        <tr>
+            <td align="LEFT">
+                
+                <ul style="padding: 0 0 0 10px;">
+                    <li class="clicker"><a href=".\Diagram Picture Report\tabular.htm" target="REPWINDOW"><font face="Arial" size="3">Diagram Picture Report </font></a></li>
+                    
+                    <ul class="nestedUL">
+                        <li class="clicker"><a href="Diagram Picture Report\Model_1\tabular.htm" target="REPWINDOW"><font face="Arial" size="2">Model_1 </font></a></li>
+                        
+                        <ul class="nestedUL">
+                            <li class="clicker"><a href="Diagram Picture Report\Model_1\OG\diagramFrame.htm" target="REPWINDOW"><font face="Arial" size="2">OG </font></a></li>
+                        </ul>
+                        
+                        <ul class="nestedUL">
+                            <li class="clicker"><a href="Diagram Picture Report\Model_1\Full View\diagramFrame.htm" target="REPWINDOW"><font face="Arial" size="2">Full View </font></a></li>
+                        </ul>
+                        
+                        <ul class="nestedUL">
+                            <li class="clicker"><a href="Diagram Picture Report\Model_1\Table View\diagramFrame.htm" target="REPWINDOW"><font face="Arial" size="2">Table View </font></a></li>
+                        </ul>
+                        
+                        <ul class="nestedUL">
+                            <li class="clicker"><a href="Diagram Picture Report\Model_1\Key View\diagramFrame.htm" target="REPWINDOW"><font face="Arial" size="2">Key View </font></a></li>
+                        </ul>
+                        
+                    </ul>
+                                        
+                </ul>
+                
+            </td>
+        </tr>
+    </table>
+	<!-- Toggling effects will be worked and enabled later. Logic improvemnt is required. -->
+	<!-- <script>
+		let clicker = document.getElementsByClassName("clicker");
+		let looper;
+		for(looper=0;looper < clicker.length;looper++)
+		{
+			clicker[looper].addEventListener("click",function(){
+			this.parentElement.querySelector(".nestedUL").classList.toggle("activeUL");
+			this.classList.toggle("clicker-down");
+			
+			});
+		}
+	</script> -->
+	
+</BODY>
+</HTML>
